@@ -84,3 +84,71 @@ const santiago = new Student3({
     cursosAprobados3 : ["Curso de .NET"],
     suscripcion : "Platzi Expert",
 })
+
+/*Vamos a hacer un primer ejemplo implementando los siguientes objetos literales:*/
+/*Para este ejemplo, juan1 tiene un nombre, un usuario, unos puntos, tenemos un objeto dentro del objeto literal que son las redes sociales, los cursos que ya aprobó como un arreglo, las escuelas en las que forma parte como un arreglo con objetos y los cursos que ve en esas escuelas*/
+const juan1 = {
+    name: "Juan",
+    username: "juan123",
+    points: 100,
+    socialMedia: {
+        twitter: "juan123",
+        instagram: "juan123",
+        facebook: undefined
+    },
+    approvedCourses: [
+        "curso introductorio de HTML y CSS",
+        "curso practico de HTML y CSS"
+    ],
+    learningPaths: [
+        {
+            name: "Escuela de Desarrollo web",
+            courses: [
+                "curso introductorio de HTML y CSS",
+                "curso practico de HTML y CSS",
+                "curso de Responsive Design"
+            ]
+        },
+        {
+            name: "Escuela de Desarrollo videojuegos",
+            courses: [
+                "curso introductorio a la produccion de Videojuegos",
+                "curso de Unreal Engine",
+                "curso de Unity en 3D"
+            ]
+        },
+    ]
+};
+/*Segundo objeto literal creado igual que el anterior, representan estudiantes de Platzi*/
+const miguelito1 = {
+    name: "Miguelito",
+    username: "miguelitofeliz",
+    points: 2587,
+    socialMedia: {
+        twitter: "miguelitofeliz",
+        instagram: "miguelito_feliz",
+        facebook: undefined
+    },
+    approvedCourses: [
+        "curso DataBusiness",
+        "curso DataViz"
+    ],
+    learningPaths: [
+        {
+            name: "Escuela de Desarrollo web",
+            courses: [
+                "curso introductorio de HTML y CSS",
+                "curso practico de HTML y CSS",
+                "curso de Responsive Design"
+            ]
+        },
+        {
+            name: "Escuela de Data Science",
+            courses: [
+                "curso DataBusiness",
+                "curso DataViz",
+                "curso de Tableau"
+            ]
+        },
+    ]
+};
