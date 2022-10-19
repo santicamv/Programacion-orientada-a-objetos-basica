@@ -8,3 +8,5 @@ class learningPath{
         this.course = course;
     }
 }
+
+export const learningPathExported = learningPath;
