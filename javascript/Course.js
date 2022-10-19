@@ -2,10 +2,14 @@
 class Course{
     constructor({
         name,
-        lesson = []
+        lesson = [],
+        isFree = false,
+        language = "spanish"
     }){
         this._name = name;
         this.lesson = lesson;
+        this.isFree = isFree;
+        this.language = language;
     }
 
     /*Los getters que se construyen con el fin de realizar encapsulamiento*/

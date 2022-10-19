@@ -71,4 +71,45 @@ class Student {
     }
 }
 
+class FreeStudent extends Student {
+    constructor(propiedades) {
+        super(propiedades) //Nos permite llamar al constructor de la clase madre (Student) y enviarle todo lo que nos llegue como propiedades
+    }
+    // Métodos propios del free student
+    approveCourse(newCourse) {
+        if (newCourse.isFree) {
+            this.approvedCourses.push(newCourse);
+        } else {
+            console.warn("Lo sentimos, " + this.name + ", solo puedes tomar cursos abiertos.")
+        }
+    }
+}
+
+class BasicStudent extends Student {
+    constructor(propiedades) {
+        super(propiedades) //Nos permite llamar al constructor de la clase madre (Student) y enviarle todo lo que nos llegue como propiedades
+    }
+    // Métodos propios del basic student
+    approveCourse(newCourse) {
+        if (newCourse.language !== "english") {
+            this.approvedCourses.push(newCourse);
+        } else {
+            console.warn("Lo sentimos, " + this.name + ", no puedes tomar cursos en inglés")
+        }
+    }
+}
+
+class ExpertStudent extends Student {
+    constructor(propiedades) {
+        super(propiedades) //Nos permite llamar al constructor de la clase madre (Student) y enviarle todo lo que nos llegue como propiedades
+    }
+    // Métodos propios del expert student
+    approveCourse(newCourse) {
+        this.approvedCourses.push(newCourse);
+    }
+}
+
 export const StudentExported = Student;
+export const FreeStudentExported = FreeStudent;
+export const BasicStudentExported = BasicStudent;
+export const ExpertStudentExported = ExpertStudent;

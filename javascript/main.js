@@ -3,7 +3,10 @@
 import {StudentExported} from "./Student.js";
 import {learningPathExported} from "./learningPath.js";
 import {CourseExported} from "./Course.js";
-import {LessonExported} from "./Lesson.mjs";
+import {LessonExported} from "./Lesson.js";
+import { FreeStudentExported } from "./Student.js";
+import { BasicStudentExported } from "./Student.js";
+import { ExpertStudentExported } from "./Student.js";
 
 
 
@@ -77,7 +80,8 @@ const cursoProgBasica = new CourseExported({
     lesson : [
         leccion1,
         leccion2
-    ]
+    ],
+    isFree : true
 });
 console.log(cursoProgBasica);
 
@@ -86,7 +90,8 @@ const cursoDefHTMLYCSS = new CourseExported({
     lesson : [
         leccion5,
         leccion6
-    ]
+    ],
+    language : "english"
 });
 
 const cursoDefHTMLYCSSAv = new CourseExported({
@@ -149,7 +154,7 @@ const escuelaVideojuegos = new learningPathExported({
 /*ESTUDIANTE*/
 
 /*Creamos nuestro primer objeto de tipo Estudiante, en este caso es un estudiante nuevo, con los atributos nombre, nombreDeUsuario e email que son obligatorios y los demas son opcionales, en este caso se coloca facebook*/
-const santiago = new StudentExported({
+const santiago = new FreeStudentExported({
     name : "Santiago",
     username : "Trackerfy",
     email : "santiago@example.com",
@@ -160,7 +165,7 @@ const santiago = new StudentExported({
     ]
 });
 /*Segundo Estudiante creado*/
-const miguelito = new StudentExported({
+const miguelito = new ExpertStudentExported({
     name : "Miguelito",
     username : "miguelitofeliz",
     email : "miguelito@example.com",
@@ -172,6 +177,11 @@ const miguelito = new StudentExported({
     ]
 });
 
+
+miguelito.approveCourse(cursoDefHTMLYCSS);
+santiago.approveCourse(cursoDefHTMLYCSS)
+console.log(santiago);
+console.log(miguelito);
 
 
 
